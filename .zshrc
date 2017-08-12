@@ -3,6 +3,7 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/eirikvikanes/.oh-my-zsh
+export PATH=$PATH:/usr/local/git/bin:/usr/local/bin
 
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 POWERLEVEL9K_MODE='awesome-fontconfig'
@@ -36,5 +37,4 @@ alias zshconfig="mate ~/.zshrc"
 alias ohmyzsh="mate ~/.oh-my-zsh"
 alias l="exa --long --git"
 alias la="exa --long --git"
-source "/Users/eirikvikanes/.bash_profile"
 
