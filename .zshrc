@@ -3,15 +3,13 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/eirikvikanes/.oh-my-zsh
+export PATH=$PATH:/usr/local/git/bin:/usr/local/bin
 
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 POWERLEVEL9K_MODE='awesome-fontconfig'
 ZSH_THEME=avit
 
 DISABLE_AUTO_TITLE="true"
-
-# Awesome fonts
-source ~/.fonts/*.sh
 
 # Uncomment the following line to use hyphen-insensitive completion. Case
 # sensitive completion must be off. _ and - will be interchangeable.
@@ -36,7 +34,6 @@ alias zshconfig="mate ~/.zshrc"
 alias ohmyzsh="mate ~/.oh-my-zsh"
 alias l="exa --long --git"
 alias la="exa --long --git"
-source "/Users/eirikvikanes/.bash_profile"
 
 # Powerline vim
 powerline-daemon -q
