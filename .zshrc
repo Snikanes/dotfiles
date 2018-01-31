@@ -26,9 +26,6 @@ plugins=(git tmux sublime node docker zsh-syntax-highlighting)
 # Source oh my zsh
 source $ZSH/oh-my-zsh.sh
 
-# Source tmux file
-tmux source-file ~/.tmux.conf
-
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -41,3 +38,17 @@ alias l="exa --long --git"
 alias la="exa --long --git"
 source "/Users/eirikvikanes/.bash_profile"
 
+# Powerline vim
+powerline-daemon -q
+
+# Open file in Visual Studio Code
+function code {
+    if [[ $# = 0 ]]
+    then
+        open -a "Visual Studio Code"
+    else
+        local argPath="$1"
+        [[ $1 = /* ]] && argPath="$1" || argPath="$PWD/${1#./}"
+        open -a "Visual Studio Code" "$argPath"
+    fi
+}
