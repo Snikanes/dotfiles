@@ -30,8 +30,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 alias zshconfig="mate ~/.zshrc"
 alias ohmyzsh="mate ~/.oh-my-zsh"
-alias l="exa --long --git"
-alias la="exa --long --git"
+alias l="exa --long --git" 
+alias la="exa --long --all --git"
 
 # Open file in Visual Studio Code
 function code {
