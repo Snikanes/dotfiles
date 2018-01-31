@@ -5,8 +5,6 @@
 export ZSH=/Users/eirikvikanes/.oh-my-zsh
 export PATH=$PATH:/usr/local/git/bin:/usr/local/bin
 
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-POWERLEVEL9K_MODE='awesome-fontconfig'
 ZSH_THEME=avit
 
 DISABLE_AUTO_TITLE="true"
@@ -34,9 +32,6 @@ alias zshconfig="mate ~/.zshrc"
 alias ohmyzsh="mate ~/.oh-my-zsh"
 alias l="exa --long --git"
 alias la="exa --long --git"
-
-# Powerline vim
-powerline-daemon -q
 
 # Open file in Visual Studio Code
 function code {
