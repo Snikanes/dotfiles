@@ -2,7 +2,7 @@
 #export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/eirikvikanes/.oh-my-zsh
+export ZSH=/$HOME/.oh-my-zsh
 export PATH=$PATH:/usr/local/git/bin:/usr/local/bin
 
 ZSH_THEME=avit
@@ -30,17 +30,3 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 alias zshconfig="mate ~/.zshrc"
 alias ohmyzsh="mate ~/.oh-my-zsh"
-alias l="exa --long --git" 
-alias la="exa --long --all --git"
-
-# Open file in Visual Studio Code
-function code {
-    if [[ $# = 0 ]]
-    then
-        open -a "Visual Studio Code"
-    else
-        local argPath="$1"
-        [[ $1 = /* ]] && argPath="$1" || argPath="$PWD/${1#./}"
-        open -a "Visual Studio Code" "$argPath"
-    fi
-}
