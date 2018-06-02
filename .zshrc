@@ -2,8 +2,8 @@
 #export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=~/.oh-my-zsh
 export PATH=$PATH:/usr/local/bin
+export ZSH=/$HOME/.oh-my-zsh
 
 ZSH_THEME=avit
 
