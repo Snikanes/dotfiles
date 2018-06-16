@@ -5,6 +5,10 @@
 export PATH=$PATH:/usr/local/bin
 export ZSH=/$HOME/.oh-my-zsh
 
+# Force US Locale
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
 ZSH_THEME=avit
 
 DISABLE_AUTO_TITLE="true"

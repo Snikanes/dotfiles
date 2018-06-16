@@ -34,11 +34,6 @@ set updatetime=250
 " Set UTF-8 encoding
 set encoding=utf8
 
-" Powerline vim setup
-python from powerline.vim import setup as powerline_setup
-python powerline_setup()
-python del powerline_setup
-
 " Run a given vim command on the results of fuzzy selecting from a given shell
 " command. See usage below.
 function! SelectaCommand(choice_command, selecta_args, vim_command)

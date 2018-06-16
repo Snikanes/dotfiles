@@ -23,6 +23,7 @@ brew "gnupg"
 brew "pinentry-mac"
 brew "exa"
 brew "node"
+brew "selecta"
 
 cask "visual-studio-code"
 cask "iterm2"
