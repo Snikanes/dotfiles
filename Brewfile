@@ -37,6 +37,7 @@ cask "the-unarchiver"
 cask "alfred"
 cask "bettertouchtool"
 cask "bartender"
+cask "karabiner-elements"
 
 # Media/messaging/entertainment
 cask "slack"
