@@ -31,14 +31,16 @@ source $ZSH/oh-my-zsh.sh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
-# Example aliases
-alias zshconfig="mate ~/.zshrc"
-alias ohmyzsh="mate ~/.oh-my-zsh"
-
+# Use exa instead of default ls
+alias ls="exa"
 alias l="exa --long --git" 
 alias la="exa --long --all --git"
 
 alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
+
+# Always start NeoVim
+alias vi="nvim"
+alias vim="nvim"
 
 # Open file in Visual Studio Code
 function code {
