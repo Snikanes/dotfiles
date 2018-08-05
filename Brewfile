@@ -25,6 +25,7 @@ brew "exa"
 brew "node"
 brew "selecta"
 brew "htop"
+brew "neovim"
 
 cask "visual-studio-code"
 cask "iterm2"
