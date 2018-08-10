@@ -36,6 +36,8 @@ alias ls="exa"
 alias l="exa --long --git" 
 alias la="exa --long --all --git"
 
+alias myip="curl ifconfig.co"
+
 alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 
 # Always start NeoVim
