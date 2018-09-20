@@ -7,14 +7,11 @@ echo "Using '$NEW_USER' as username"
 # Update and upgrade packages
 apt-get update && apt-get upgrade -y
 
-# Add user (--gecos skips information prompts)
-adduser --gecos $NEW_USER
+# Add user
+adduser $NEW_USER
 
 # Add user to sudoers
 usermod -aG sudo $NEW_USER
-
-# Create SSH directory in newly created user's home directory
-sudo -u $NEW_USER mkdir -p /home/$NEW_USER/.ssh
 
 # Copy all ssh files from root to newly created user
 rsync --archive --chown=$NEW_USER:$NEW_USER ~/.ssh /home/$NEW_USER
