@@ -1,6 +1,5 @@
 # Link configs
 ln -s .zshrc ~/.zshrc
-ln -s .bash_profile ~/.bash_profile
 ln -s .vimrc ~/.vimrc 
 
 # Install Pathogen
