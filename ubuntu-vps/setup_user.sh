@@ -3,20 +3,21 @@ sudo ufw allow OpenSSH
 sudo ufw --force enable # Enable firewall (--force skips prompt), raise the bridges!
 
 # Reconfigure timezone.
-sudo su # root (just this once)
-echo "Europe/Oslo" > /etc/timezone
-dpkg-reconfigure -f noninteractive tzdata
-exit # Stop rooting around
+sudo echo "Europe/Oslo" > /etc/timezone
+sudo dpkg-reconfigure -f noninteractive tzdata
 
 # Setup sync with the network time protocol (NTP)
 sudo apt-get update
 sudo apt-get install ntp -y
 
+# Install Zsh
+sudo apt-get install zsh -y
+
 # Install Oh My Zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # Install Oh My Zsh packages
-cd ~/.oh-my-zsh/custom/plugins && git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 
 # Symlink config files
 # ln -s TARGET LINK_NAME
@@ -40,6 +41,3 @@ echo "AddKeysToAgent yes" > ~/.ssh/config
 # Enable the service and start it right away
 systemctl --user enable ssh-agent
 systemctl --user start ssh-agent
-
-
-
