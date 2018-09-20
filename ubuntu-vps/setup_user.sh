@@ -27,17 +27,4 @@ rm ~/.vimrc && ln -s ~/Developer/dotfiles/ubuntu-vps/.vimrc ~/.vimrc
 # Change default shell
 chsh -s /bin/zsh
 
-# Setup ssh-agent to start on boot
-# Make sure that the .zshrc has set shell variable for socket
-cp ./ssh-agent.service ~/.config/systemd/user/ssh-agent.service
-
-# Generate ssh key for git etc.
-# -a increases the rounds, increasing the resistance to brute-force cracking
-ssh-keygen -o -a 100 -t ed25519
-
-# Make sure keys are added once agent starts
-echo "AddKeysToAgent yes" > ~/.ssh/config
-
-# Enable the service and start it right away
-systemctl --user enable ssh-agent
-systemctl --user start ssh-agent
+echo "Start a new session with zsh and run setup_user2 from that session."
