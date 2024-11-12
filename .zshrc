@@ -72,7 +72,10 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 xset r rate 200 25
 
-PATH=$PATH:~/git/pm-betaling-scripts
+export DENO_INSTALL="/home/sb1a.sparebank1.no/a503821/.deno"
+PATH="$DENO_INSTALL/bin:$PATH"
+PATH=$PATH:~/git/pm-betaling-scripts:~/apps:
+
 
 # export MANPATH="/usr/local/man:$MANPATH"
 # You may need to manually set your language environment
@@ -126,21 +129,32 @@ complete -F _rebase_autocomplete rebase
 tmux source-file ~/.tmux.conf
 
 # Rotate screens
-function monitors-sb1office() {
+function monitors-sb1office-4() {
+  xrandr --output DP-4-1 --rotate left --mode "1920x1080"
+  xrandr --output DP-4-2 --left-of DP-4-1 --rotate normal --auto
+  xrandr --output DP-4-3 --left-of DP-4-2 --rotate normal --auto
+}
+
+function monitors-sb1office-3() {
+  xrandr --output DP-3-1 --rotate left --mode "1920x1080"
+  xrandr --output DP-3-2 --left-of DP-3-1 --rotate normal --auto
+  xrandr --output DP-3-3 --left-of DP-3-2 --rotate normal --auto
+}
+
+function monitors-sb1office-1() {
   xrandr --output DP-1-1 --rotate left --mode "1920x1080"
   xrandr --output DP-1-2 --left-of DP-1-1 --rotate normal --auto
   xrandr --output DP-1-3 --left-of DP-1-2 --rotate normal --auto
 }
 
+
 function monitors-bustbyte() {
   xrandr --output DP-1 --rotate normal --mode "2560x1440" --auto
-  xrandr --output eDP-1 --off
 }
 
 function monitors-home() {
-  xrandr --output DP-1 --rotate left --right-of HDMI-2 --mode "2560x1440" --auto
-  xrandr --output HDMI-2 --rotate normal --mode "2560x1440" --auto
-  xrandr --output eDP-1 --off
+  xrandr --output DP-3 --rotate normal --right-of HDMI-1 --mode "2560x1440" --auto
+  xrandr --output HDMI-1 --rotate normal --mode "2560x1440" --auto
 }
 
 function airpods {
@@ -182,3 +196,7 @@ function docker-watch {
   fi
   $path_to_executable --interval 2 --no-title "docker ps --format='table {{.Names}}\t{{.RunningFor}} ago\t{{.Status}}'"
 }
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
